@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+header {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#start-recording {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#start-recording:hover {
+    background-color: #45a049;
+}
+
+#stop-recording {
+    background-color: #f44336;
+    color: white;
+}
+
+#stop-recording:hover {
+    background-color: #da190b;
+}
+
+#start-recording:disabled {
+    background-color: #9E9E9E;
+    color: #E0E0E0;
+    cursor: not-allowed;
+}
+
+#stop-recording:disabled {
+    background-color: #9E9E9E;
+    color: #E0E0E0;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
