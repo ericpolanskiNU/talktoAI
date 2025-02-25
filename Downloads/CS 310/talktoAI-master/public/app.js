@@ -155,6 +155,41 @@ function handleFlaggedInput(moderationResult, originalText) {
     }
 }
 
+/*
+// handle flagged messages with category-specific responses
+function handleFlaggedInput(moderationResult, originalText) {
+    console.log('Handling flagged input:', originalText);
+
+    let responseMessage = "Hmm, let's talk about something else."; // Default fallback
+
+    if (moderationResult.categories.violence) {
+        console.log("Flagged for violence.");
+        responseMessage = "Violence isn’t the answer! Maybe we can find a peaceful solution?";
+    } 
+    else if (moderationResult.categories.hate) {
+        console.log("Flagged for hate speech.");
+        responseMessage = "It's always important to be kind to others. Let's be respectful!";
+    } 
+    else if (moderationResult.categories.sexual) {
+        console.log("Flagged for sexual content.");
+        responseMessage = "Let's keep the conversation appropriate. Want to talk about something else?";
+    } 
+    else if (moderationResult.categories.self_harm) {
+        console.log("Flagged for self-harm.");
+        responseMessage = "I'm really sorry you're feeling this way. You're not alone. Maybe talking to someone could help?";
+        logConcerningMessage(originalText, "severe");
+        alertGuardian(originalText);
+    } 
+    else if (moderationResult.categories.harassment) {
+        console.log("Flagged for harassment.");
+        responseMessage = "Let's be kind and respectful to each other!";
+    }
+
+    // Update UI
+    responseText.innerText = responseMessage;
+}
+ */
+
 // Log flagged messages
 function logConcerningMessage(userInput, severity) {
     fetch('/log', {
